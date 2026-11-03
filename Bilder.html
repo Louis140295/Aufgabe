@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Bildergalerie</title>
+    <style> 
+        /* Grundgerüst */
+        body {
+            position: relative;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Footer ganz unten */
+        footer {
+            margin-top: 40px;
+            padding-top: 15px;
+            border-top: 1px solid #cbd5e1;
+            text-align: center;
+            font-size: 13px;
+            color: #64748b
+
+        }
+        /* Wasserzeichen - Hintergrund */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url(bilder/hintergrund.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.35;
+            z-index: -1;
+        }
+
+        /* -- Styling für die Navigation -- */
+        nav {
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            display: inline-block;
+            background-color: #f1f5f9;
+            color: #334155;
+            text-decoration: none;
+            padding: 10px 18px;
+            margin-right: 8px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        /* Effekt für die Maus */
+        nav a:hover {
+            background-color: #2563eb;
+            color: #ffffff;
+        }
+
+        /* -- Styling für die Bildergalerie -- */
+        .galerie {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .galerie-item {
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+        }
+
+        .galerie-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            display: block;
+        }
+
+        .galerie-item p {
+            margin: 10px 0 0 0;
+            font-size: 14px;
+            color: #334155;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Startseite</a>
+        <a href="ueber-mich.html">Über mich</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="Bilder.html">Bilder</a>
+    </nav>
+
+    <h1>Meine Bildergalerie</h1>
+
+    <div class="galerie">
+        <div class="galerie-item">
+            <img src="bilder/Server.jpeg" alt="Beschreibung für Bild 1">
+            <p>Server Beispiel</p>
+
+        </div>
+
+        <div class="galerie-item">
+            <img src="bilder/Beratung.jpeg" alt="Beschreibung für Bild 2">
+            <p>Unternehmensberatung</p>
+        </div>
+
+        <div class="galerie-item">
+            <img src="bilder/03_10_Beispielbild.jpg" alt="Beschreibung für Bild 3">
+            <p>Anwendungsentwicklung</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy;2026 Louis. Alle Rechte vorbehalten. Die Bilder wurden mithilfe von KI generiert!
+    </footer>
+
+</body>
+</html>
